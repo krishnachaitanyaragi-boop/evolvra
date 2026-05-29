@@ -178,17 +178,30 @@ export default function Dashboard({
           <p className="text-gray-400 text-xs mt-0.5">{config.tagline}</p>
         </div>
 
-        <button 
-          onClick={() => onNavigate('coach')}
-          className="relative group shrink-0 flex items-center gap-2.5 bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-emerald-500/30 rounded-2xl py-3 px-5 text-emerald-300 hover:text-white transition-all overflow-hidden shadow-lg shadow-emerald-500/5 hover:scale-[1.02]"
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-teal-500 opacity-0 group-hover:opacity-10 transition-opacity" />
-          <Sparkles className="w-4 h-4 text-emerald-400 group-hover:animate-spin-slow" />
-          <div className="text-left">
-            <div className="text-[10px] uppercase font-bold text-emerald-400">Ask EvolvRa Coach</div>
-            <div className="text-xs font-semibold text-gray-300">Generate Full Weekly Audit</div>
-          </div>
-        </button>
+        <div className="flex flex-col gap-2 w-full md:w-auto shrink-0 relative z-10">
+          <button 
+            onClick={() => onNavigate('coach')}
+            className="w-full flex items-center gap-2.5 bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-emerald-500/30 rounded-2xl py-2.5 px-4 text-emerald-300 hover:text-white transition-all shadow-lg shadow-emerald-500/5 hover:scale-[1.02]"
+          >
+            <Sparkles className="w-4 h-4 text-emerald-400 shrink-0" />
+            <div className="text-left">
+              <div className="text-[9px] uppercase font-bold text-emerald-400">Ask EvolvRa Coach</div>
+              <div className="text-xs font-semibold text-gray-300">Generate Weekly Audit</div>
+            </div>
+          </button>
+          
+          <a 
+            href="https://github.com/krishnachaitanyaragi-boop/evolvra/releases/latest/download/EvolvRa.apk"
+            download
+            className="w-full flex items-center justify-center gap-2.5 bg-gradient-to-r from-rose-500/20 to-orange-500/20 border border-rose-500/30 rounded-2xl py-2.5 px-4 text-rose-300 hover:text-white transition-all shadow-lg shadow-rose-500/5 hover:scale-[1.02] text-center"
+          >
+            <Dumbbell className="w-4 h-4 text-rose-400 shrink-0" />
+            <div className="text-left">
+              <div className="text-[9px] uppercase font-bold text-rose-400">Install Native App</div>
+              <div className="text-xs font-semibold text-gray-300">Download Mobile APK</div>
+            </div>
+          </a>
+        </div>
       </div>
 
       {/* Main Grid: Calorie Ring & Macros */}
